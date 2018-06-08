@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/quote/quote",
     "pages/home/home",
     "pages/channel/channel",
-    "pages/quote/quote",
     "pages/index/index",
     "pages/addCgi/addCgi"
   ],
@@ -16,11 +16,11 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页"
-      },{
         "pagePath": "pages/quote/quote",
         "text": "报价"
+      },{
+        "pagePath": "pages/home/home",
+        "text": "首页"
       },{
         "pagePath": "pages/channel/channel",
         "text": "渠道"
