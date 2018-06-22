@@ -39,4 +39,16 @@ var showModel = (title, content) => {
     })
 }
 
-module.exports = { formatTime, showBusy, showSuccess, showModel }
+var randomString=len => {
+  len = len || 32;
+  var $chars = 'ABCDEFGHJKMNPQRSTUVWXYZ0123456789';
+  var maxPos = $chars.length;
+  var pwd = '';
+  for (var i = 0; i < len; i++) {
+    pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+  }
+  console.log('randomString===='+pwd);
+  return pwd;
+}
+
+module.exports = { formatTime, showBusy, showSuccess, showModel, randomString }

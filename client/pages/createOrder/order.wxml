@@ -1,0 +1,64 @@
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='quote-form'>
+      <view class="volume-box">
+        <view class="form-item">
+          <view class="form-text">长</view>
+          <input name="len" id="len" type="text" placeholder="CM" class="input-txt" />
+        </view>
+        <view class="form-item">
+          <view class="form-text">宽</view>
+          <input name="width" id="width" type="text" placeholder="CM" class="input-txt" />
+        </view>
+        <view class="form-item">
+          <view class="form-text">高</view>
+          <input name="height" id="height" type="text" placeholder="CM" class="input-txt" />
+        </view>
+      </view>
+      <view>
+        <view class="form-item">
+          <view class="form-text">重量</view>
+          <input name="rweight" id="rweight" type="text" placeholder="KG" class="input-txt" />
+        </view>
+        <view class="form-item">
+          <view class="form-text">物品类型</view>
+          <picker name="goodstype" bindchange="bindGoodPickerChange" value="{{goodTypes[goodIndex].value}}" range="{{goodNames}}">
+            <view class="picker pick-txt">
+              {{goodTypes[goodIndex].name}}
+            </view>
+          </picker>
+        </view>
+        <view class="form-item">
+          <view class="form-text">目的地</view>
+          <picker name="country" bindchange="bindAddrPickerChange" value="{{addrs[addrIndex].value}}" range="{{addrsName}}">
+            <view class="picker pick-txt">
+              {{addrs[addrIndex].name}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="form-item">
+        <button formType="submit">查询</button>
+        <button formType="reset">重置</button>
+      </view>
+    </view>
+  </form>
+</view>
+<view wx:if="{{showChannel}}">
+  <view class='result-title'>
+  <text>渠道及总费用</text>
+  <text>（总共{{searchResult.length}}条）</text>
+  </view>
+  <view wx:for="{{searchResult}}" wx:for-index="idx" wx:key="idx" wx:for-item="item">
+    <view class='channel-item'>
+      <view class='item-line-1'>
+        <view>{{item.channel}}</view>
+        <!-- <view>报价备注</view> -->
+        <view class='all-price'>{{item.allPrice}}</view>
+      </view>
+      <view class='item-line-2'>
+        {{item.aging}}
+      </view>
+    </view>
+  </view>
+</view>

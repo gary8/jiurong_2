@@ -33,6 +33,7 @@ router.get('/message', controllers.message.get)
 router.post('/message', controllers.message.post)
 
 router.get('/demo',controllers.demo)
+router.get('/initData', controllers.initData)
 router.get('/quote', controllers.quote)
 
 module.exports = router

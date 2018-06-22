@@ -4,7 +4,8 @@
     "pages/home/home",
     "pages/channel/channel",
     "pages/index/index",
-    "pages/addCgi/addCgi"
+    "pages/addCgi/addCgi",
+    "pages/createOrder/order"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -18,12 +19,14 @@
       {
         "pagePath": "pages/quote/quote",
         "text": "报价"
-      },{
+      },
+      {
         "pagePath": "pages/home/home",
         "text": "首页"
-      },{
-        "pagePath": "pages/channel/channel",
-        "text": "渠道"
+      },
+      {
+        "pagePath": "pages/createOrder/order",
+        "text": "下单"
       },
       {
         "pagePath": "pages/index/index",
