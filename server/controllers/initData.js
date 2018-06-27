@@ -27,7 +27,7 @@ module.exports = async ctx => {
   };
   const mainOptions = {
     method: 'GET',
-    uri: 'http://jrwl.kingtrans.cn/nclient/Logon?action=main',
+    uri: 'http://jrwl.kingtrans.cn/nclient/CCOrder?action=getOrderList',
     headers: {
       'Cookie': '123'
     },
@@ -64,17 +64,18 @@ module.exports = async ctx => {
     // console.log(res.body);
     const $ = cheerio.load(res.body);
     var countryJson=[];
-    $('option','#indexSearchCountry').each(function(i,el){
-      console.log($(this).text());
+    $('option','select[name=country]').each(function(i,el){
+      console.log($(this).text().trim());
       countryJson.push({
-        'name': $(this).text(),
+        'name': $(this).text().trim(),
         'value': $(this).attr('value')
       })
     })
-    var businessTypeJson = [];
-    $('option', '#indexSearchLogistic').each(function (i, el) {
+    var channelIdJson = [];
+    console.log('channelid length=' + $('option', 'select[name=rchannelid]').length);
+    $('option','select[name=rchannelid]').each(function (i, el) {
       console.log($(this).text().trim());
-      businessTypeJson.push({
+      channelIdJson.push({
         'name': $(this).text().trim(),
         'value': $(this).attr('value')
       })
@@ -83,7 +84,7 @@ module.exports = async ctx => {
     ctx.state.data = {
       cookie: jsessionid,
       country: countryJson,
-      businessType: businessTypeJson
+      channelId: channelIdJson
     }
   }).catch(function (err) {
     // console.log(err.headers['set-cookie']);

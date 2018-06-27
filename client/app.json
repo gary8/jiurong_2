@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/quote/quote",
     "pages/home/home",
+    "pages/quote/quote",
     "pages/channel/channel",
     "pages/index/index",
     "pages/addCgi/addCgi",
@@ -17,12 +17,12 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/quote/quote",
-        "text": "报价"
-      },
-      {
         "pagePath": "pages/home/home",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/quote/quote",
+        "text": "报价"
       },
       {
         "pagePath": "pages/createOrder/order",

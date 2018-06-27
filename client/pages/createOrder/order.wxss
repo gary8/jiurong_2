@@ -26,6 +26,9 @@
   padding: 4rpx;
   text-align: center;
 }
+#rweight,#goodsnum{
+  width: 150rpx;
+}
 .form-text{
   text-align: center;
   line-height: 60rpx;
@@ -37,6 +40,10 @@
   margin-left: 20rpx;
   padding: 4rpx;
   text-align: center;
+}
+.picker-class{
+  height: 48rpx;
+  flex-grow: 1;
 }
 button{
   height: 60rpx;

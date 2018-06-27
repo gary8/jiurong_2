@@ -25,9 +25,15 @@
   padding: 4rpx;
   text-align: center;
 }
+#rweight{
+  width: 120rpx;
+}
 .form-text{
   text-align: center;
   line-height: 60rpx;
+}
+.goods-style-picker{
+  width: 150rpx;
 }
 .pick-txt{
   height: 48rpx;
@@ -36,6 +42,9 @@
   margin-left: 20rpx;
   padding: 4rpx;
   text-align: center;
+}
+.goods-style-country{
+  width: 400rpx;
 }
 button{
   height: 60rpx;

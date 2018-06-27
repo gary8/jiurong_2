@@ -19,7 +19,7 @@ App({
           util.showSuccess('请求成功完成')
           // console.log(JSON.stringify(result.data))
           _this.globalData = result.data.data;
-          console.log("cookie="+_this.globalData.cookie);
+          console.log(_this.globalData.country);
         },
         fail(error) {
           util.showModel('请求失败', error);
@@ -30,7 +30,7 @@ App({
     //country:[{'name':'','value':''}]
     //cookie: '',
     //country: [],
-    //channel: []
+    //channelId: []
     globalData: {
       
     }
